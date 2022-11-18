@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      -
+        name: build the docker image
+        uses: docker/build-action@v2
+        
+      - name: build the docker image
+        run: |
+         docker build -t myapp .
+      - name: build the container 
+        run: |
+          docker run --name yout -p 80:80b -d -it myapp2 
+       
