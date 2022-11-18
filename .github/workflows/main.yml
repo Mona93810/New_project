@@ -24,6 +24,7 @@ jobs:
     - name: build the docker image
       run: |
          docker build -t myapp .
+         
     - name: build the container 
       run: |
           docker run --name yout -p 80:80b -d -it myapp2 
